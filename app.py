@@ -4,12 +4,16 @@ def main():
 
 	namelist1 = list(name1)
 	namelist2 = list(name2)
-
+ 
 	for i,j in enumerate(namelist1):
-		for k,l in enumerate(namelist2):
-			if j == l:
-				namelist1.pop(i)
-				namelist2.pop(k)
+		if j in namelist2:
+			#print(i,j)
+			#print(namelist2.index(j),namelist2[namelist2.index(j)])
+			namelist1[i] = "_"
+			namelist2[namelist2.index(j)] = "_"
+
+	namelist1.remove("_")
+	namelist2.remove("_")
 
 	rvalue = len(namelist1) + len(namelist2)
 
