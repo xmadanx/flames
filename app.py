@@ -7,8 +7,8 @@ def main():
  
 	for i,j in enumerate(namelist1):
 		if j in namelist2:
-			#print(i,j)
-			#print(namelist2.index(j),namelist2[namelist2.index(j)])
+			print(i,j)
+			print(namelist2.index(j),namelist2[namelist2.index(j)])
 			namelist1[i] = "_"
 			namelist2[namelist2.index(j)] = "_"
 
@@ -17,11 +17,11 @@ def main():
 
 	rvalue = len(namelist1) + len(namelist2)
 
-	#print(f"\nFLAMES value is {rvalue}\n")
+	print(f"\nFLAMES value is {rvalue}\n")
 
 	flist = list("FLAMES")
 
-	#print(*flist)
+	print(*flist)
 
 	while len(flist) != 1:
 		if rvalue > len(flist):
@@ -31,14 +31,15 @@ def main():
 
 		removed = flist.pop(value - 1)
 
-		#print(f"{removed} is removed")
+		print(f"{removed} is removed")
 
-		#print(*flist)
+		
 
 		for m in range(value-1):
 			flist.append(flist[0])
 			flist.pop(0)
-
+			
+		print(*flist)
 	flamesdict = {
 		"F" : "Friend",
 		"L" : "Love",
