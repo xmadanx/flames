@@ -12,8 +12,8 @@ def main():
 			namelist1[i] = "_"
 			namelist2[namelist2.index(j)] = "_"
 
-	namelist1.remove("_")
-	namelist2.remove("_")
+	namelist1 = list(filter(lambda x: x != "_", namelist1))
+	namelist2 = list(filter(lambda x: x != "_", namelist2))
 
 	rvalue = len(namelist1) + len(namelist2)
 
